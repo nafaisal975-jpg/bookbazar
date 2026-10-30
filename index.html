@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#1E3A8A">
+<meta name="theme-color" content="#172B4D">
 <meta name="description" content="BookBazar: buy and sell new and used books across Bangladesh.">
 <meta property="og:title" content="BookBazar — Buy &amp; Sell Books in Bangladesh">
 <meta property="og:description" content="Affordable textbooks, novels and exam guides from readers near you.">
@@ -11,24 +11,24 @@
 <title>BookBazar — Buy &amp; Sell Books in Bangladesh</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--sky:#10B981;--sky-d:#059669;--btn:#10B981;--navy:#1E3A8A;--mist:#F1F5F9;--bg:#F8FAFC;--line:#E2E8F0;--ink:#0F172A;--muted:#64748B;--red:#d64545;--r:16px;--sh:0 10px 30px rgba(30,58,138,.10)}
+:root{--sky:#0F9D78;--sky-d:#087F62;--btn:#0F9D78;--navy:#172B4D;--mist:#EAF5F1;--bg:#F6F9F7;--line:#DFE9E4;--ink:#172B3A;--muted:#647A75;--red:#C74747;--r:16px;--sh:0 12px 32px rgba(23,43,77,.09)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:130px}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 "Hind Siliguri",Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
 button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}
-:focus-visible{outline:3px solid #A7F3D0;outline-offset:2px}[hidden]{display:none!important}
+:focus-visible{outline:3px solid #73D7B8;outline-offset:2px}[hidden]{display:none!important}
 .wrap{width:min(1160px,calc(100% - 32px));margin:auto}
-header{position:sticky;top:0;z-index:10;background:var(--navy);backdrop-filter:blur(10px);border-bottom:4px solid var(--sky);box-shadow:0 6px 22px rgba(30,58,138,.18)}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 0 8px}
-.logo{display:flex;align-items:center;gap:9px;font-size:22px;font-weight:800;color:#fff;letter-spacing:-.5px}
-.logo i{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--sky);color:#fff;font-style:normal;font-size:20px;box-shadow:0 4px 12px rgba(16,185,129,.28)}
+.logo{display:flex;align-items:center;gap:9px;font-size:22px;font-weight:800;color:var(--navy);letter-spacing:-.5px}
+.logo i{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--sky);color:#fff;font-style:normal;font-size:20px}
 .sp{flex:1}
-.btn{border:1px solid #ffffff55;background:#ffffff12;color:#fff;border-radius:12px;padding:9px 14px;font-weight:700;transition:.15s}
-.btn:hover{border-color:var(--sky);background:#ffffff20;transform:translateY(-1px)}
-.btn.pri{background:var(--btn);border-color:var(--btn);color:#fff}.btn.pri:hover{background:#059669}
+.btn{border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:12px;padding:9px 14px;font-weight:700;transition:.15s}
+.btn:hover{border-color:var(--sky);transform:translateY(-1px)}
+.btn.pri{background:var(--btn);border-color:var(--btn);color:#fff}.btn.pri:hover{background:#087F62}
 .btn.on{background:var(--navy);color:#fff;border-color:var(--navy)}
 .btn.danger{color:var(--red);border-color:#f2c4c4}.btn:disabled{opacity:.6;cursor:wait}
-.lang{border:1px solid #ffffff55;border-radius:12px;background:#fff;padding:9px 8px;color:var(--navy);font-weight:700}
-.search{display:grid;grid-template-columns:170px 1fr auto;background:#fff;border:1px solid #ffffff44;border-radius:14px;overflow:hidden;margin:0 0 14px;box-shadow:0 6px 18px rgba(15,23,42,.14)}
+.lang{border:1px solid var(--line);border-radius:12px;background:#fff;padding:9px 8px;color:var(--navy);font-weight:700}
+.search{display:grid;grid-template-columns:170px 1fr auto;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:0 0 12px;box-shadow:var(--sh)}
 .search select,.search input{border:0;background:transparent;padding:13px 14px;min-width:0;color:var(--ink)}
 .search select{border-right:1px solid var(--line);background:var(--mist)}
 .search button{border:0;background:var(--btn);color:#fff;font-weight:800;padding:0 24px}
@@ -49,7 +49,7 @@ h2.t{font-size:25px;letter-spacing:-.6px;color:var(--navy);margin:8px 0 2px}.sub
 .count{margin-right:auto;color:var(--muted);font-size:13px}
 .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:.18s}
-.card:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:#6EE7B7}
+.card:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:#73D7B8}
 .open{border:0;background:none;padding:0;text-align:left;color:inherit;display:flex;flex-direction:column;flex:1}
 .cover{height:175px;display:grid;place-items:center;background:var(--mist);position:relative;overflow:hidden;width:100%}
 .cover img{width:100%;height:100%;object-fit:cover}.emo{font-size:64px}
@@ -61,37 +61,18 @@ h2.t{font-size:25px;letter-spacing:-.6px;color:var(--navy);margin:8px 0 2px}.sub
 .heart{border:1px solid var(--line);background:#fff;border-radius:10px;width:34px;height:32px;font-size:17px;color:var(--sky-d)}
 .heart.on{color:var(--red);background:#fff0f0;border-color:#f2c4c4}
 .cf{padding:0 12px 12px;display:flex;justify-content:flex-end}
-.empty{grid-column:1/-1;text-align:center;border:1px dashed #A7F3D0;border-radius:var(--r);padding:44px 14px;color:var(--muted);background:#fff}
+.empty{grid-column:1/-1;text-align:center;border:1px dashed #9ADBC5;border-radius:var(--r);padding:44px 14px;color:var(--muted);background:#fff}
 .empty strong{display:block;color:var(--navy);font-size:19px;margin-bottom:5px}
 .more{text-align:center;margin-top:20px}
 .band{padding:36px 0;border-top:1px solid var(--line)}.band.alt{background:var(--mist)}
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
 .box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
 .box b{display:block;color:var(--navy);margin:4px 0}.box p{margin:0;color:var(--muted);font-size:13px}.box .n{font-size:24px}
-footer{background:var(--navy);color:#DBEAFE;padding:32px 0 18px;border-top:5px solid var(--sky);box-shadow:0 -8px 24px rgba(30,58,138,.08)}footer .logo{color:#fff}footer .logo i{background:var(--sky)}footer p{color:#BFDBFE;max-width:340px}
-.ft{display:flex;gap:22px;flex-wrap:wrap;justify-content:space-between}.fl{display:flex;gap:12px 20px;flex-wrap:wrap;font-size:13px}.fl a:hover{color:#A7F3D0}
-.fb{border-top:1px solid #ffffff22;margin-top:18px;padding-top:14px;font-size:12px;color:#BFDBFE}
-dialog{width:min(560px,calc(100% - 24px));max-height:90vh;overflow:auto;border:0;border-radius:20px;padding:0;background:#fff;color:var(--ink);box-shadow:0 25px 80px #1E3A8A33}
-dialog::backdrop{background:#1E3A8A88;backdrop-filter:blur(3px)}
-/* Private, clean sign-in gate */
-#authGate{position:fixed;inset:0;z-index:999;background:linear-gradient(145deg,#F8FAFC 0%,#EEF2FF 100%);display:none;place-items:center;padding:20px}
-#authGate.show{display:grid}
-#loginDlg.auth-page{width:min(420px,calc(100% - 24px));max-height:calc(100vh - 32px);border:1px solid #E2E8F0;border-radius:22px;box-shadow:0 24px 70px rgba(30,58,138,.16)}
-#loginDlg.auth-page .modal{padding:clamp(22px,5vw,34px);gap:16px}
-#loginDlg.auth-page .mh{display:block;text-align:center;padding-top:6px}
-#loginDlg.auth-page .mh h2{font-size:27px;letter-spacing:-.6px}
-#loginDlg.auth-page .mh:before{content:"▤";display:grid;place-items:center;margin:0 auto 15px;width:54px;height:54px;border-radius:16px;background:#1E3A8A;color:#10B981;font-size:30px;font-weight:800}
-#loginDlg.auth-page #aNote{text-align:center;font-size:13px}
-#loginDlg.auth-page .f{font-size:13px;color:#334155;gap:7px}
-#loginDlg.auth-page .f input{padding:13px 14px;border-radius:12px;background:#F8FAFC}
-#loginDlg.auth-page .ma{display:grid;grid-template-columns:1fr}
-#loginDlg.auth-page #aGo{padding:12px;border-radius:12px;font-size:15px}
-#loginDlg.auth-page .ma [data-close]{display:none}
-#loginDlg.auth-page .mh .x{display:none}
-#loginDlg.auth-page #aPrompt{display:block;margin-top:4px}
-#loginDlg.auth-page .link{text-decoration:none}
-#loginDlg.auth-page #aMsg{overflow-wrap:anywhere;color:#B91C1C}
-body.auth-locked{overflow:hidden}
+footer{background:var(--navy);color:#E2F3EC;padding:28px 0 18px}footer .logo{color:#fff}footer p{color:#C5DED5;max-width:340px}
+.ft{display:flex;gap:22px;flex-wrap:wrap;justify-content:space-between}.fl{display:flex;gap:12px 20px;flex-wrap:wrap;font-size:13px}.fl a:hover{color:#A7E8D2}
+.fb{border-top:1px solid #ffffff22;margin-top:18px;padding-top:14px;font-size:12px;color:#C5DED5}
+dialog{width:min(560px,calc(100% - 24px));max-height:90vh;overflow:auto;border:0;border-radius:20px;padding:0;background:#fff;color:var(--ink);box-shadow:0 25px 80px rgba(23,43,77,.22)}
+dialog::backdrop{background:#172B4D88;backdrop-filter:blur(3px)}
 .modal{padding:22px;display:grid;gap:13px}.mh{display:flex;justify-content:space-between;align-items:center;gap:10px}
 .modal h2{margin:0;color:var(--navy);font-size:23px}.x{border:0;background:var(--mist);color:var(--navy);border-radius:10px;width:36px;height:36px;font-size:21px}
 .f{display:grid;gap:5px;font-weight:700;font-size:13px}
@@ -105,13 +86,36 @@ body.auth-locked{overflow:hidden}
 #pv{display:flex;gap:8px;flex-wrap:wrap}.pvi{position:relative}.pvi img{width:64px;height:64px;object-fit:cover;border-radius:9px;border:1px solid var(--line)}
 .pvi button{position:absolute;top:-6px;right:-6px;width:22px;height:22px;border-radius:50%;border:0;background:var(--red);color:#fff;line-height:1}
 .toast{position:fixed;inset:auto auto 20px 50%;margin:0;border:0;width:max-content;transform:translateX(-50%);background:var(--navy);color:#fff;border-radius:999px;padding:10px 16px;box-shadow:var(--sh);max-width:calc(100% - 28px);text-align:center}.sk{height:290px;background:linear-gradient(90deg,var(--mist),#fff,var(--mist));background-size:200% 100%;animation:sk 1.2s infinite}@keyframes sk{to{background-position:-200% 0}}.thb{border:0;background:none;padding:0}.thb.on img{border-color:var(--sky)}
+/* Refined BookBazar palette + members-only entry screen */
+body.auth-required{min-height:100vh;background:#F2F7F4}
+body.auth-required header,body.auth-required .hero,body.auth-required main,body.auth-required .band,body.auth-required footer{display:none!important}
+body.auth-required #loginDlg{position:fixed;inset:0;margin:0;width:100%;max-width:none;height:100dvh;max-height:none;padding:28px;display:grid;place-items:center;overflow:auto;border:0;border-radius:0;background:radial-gradient(ellipse at 12% 15%,rgba(15,157,120,.17),transparent 34%),radial-gradient(ellipse at 88% 82%,rgba(23,43,77,.13),transparent 38%),linear-gradient(135deg,#F5FAF7 0%,#EAF5F0 52%,#F7F9FC 100%);box-shadow:none}
+body.auth-required #loginDlg::backdrop{background:transparent;backdrop-filter:none}
+body.auth-required #loginDlg .modal{width:min(100%,490px);margin:auto;padding:clamp(24px,4vw,38px);gap:17px;border:1px solid rgba(255,255,255,.9);border-radius:26px;background:rgba(255,255,255,.94);box-shadow:0 24px 70px rgba(23,43,77,.13);backdrop-filter:blur(14px)}
+.auth-brand{display:flex;align-items:center;gap:12px;margin-bottom:1px}
+.auth-mark{display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,#0F9D78,#087F62);color:#fff;font-size:27px;box-shadow:0 8px 18px rgba(15,157,120,.22)}
+.auth-wordmark{font-size:23px;font-weight:800;letter-spacing:-.7px;color:#172B4D;line-height:1.1}
+.auth-tagline{font-size:12px;color:#71847E;margin-top:3px}
+.auth-welcome{padding:17px 18px;border-radius:18px;background:linear-gradient(120deg,#E8F7F0,#F1F6F8);border:1px solid #E0EEE7}
+.auth-kicker{font-size:10px;letter-spacing:1.7px;font-weight:800;color:#087F62}
+.auth-welcome h1{font-size:clamp(23px,4vw,30px);line-height:1.12;letter-spacing:-.8px;color:#172B4D;margin:7px 0 7px}
+.auth-welcome p{font-size:13px;line-height:1.5;color:#647A75;margin:0}
+body.auth-required #authForm .mh h2{font-size:21px;color:#172B4D}
+body.auth-required #authForm .f{color:#304A50}
+body.auth-required #authForm .f input{padding:12px 13px;border-color:#DCE8E2;background:#FBFDFC;border-radius:12px}
+body.auth-required #authForm .f input:focus{border-color:#0F9D78;outline:3px solid rgba(15,157,120,.13)}
+body.auth-required #authForm .btn.pri{box-shadow:0 8px 18px rgba(15,157,120,.18)}
+body.auth-required #authForm .ma{justify-content:stretch}
+body.auth-required #authForm .ma .btn{flex:1;padding:11px 14px}
+body.auth-required #authForm .link{color:#087F62}
+body.auth-required #authForm .note{line-height:1.5}
+@media(max-width:520px){body.auth-required #loginDlg{padding:14px}body.auth-required #loginDlg .modal{padding:22px 18px;border-radius:21px;gap:14px}.auth-welcome{padding:14px}}
 @media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-in{grid-template-columns:1fr}.shelf{display:none}}
 @media(max-width:650px){.nav .btn{padding:8px 10px;font-size:13px}.search{grid-template-columns:1fr auto}.search select{grid-column:1/-1;border-right:0;border-bottom:1px solid var(--line)}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.cover{height:140px}.three,.two{grid-template-columns:1fr}.hero-in{padding:32px 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 </style>
 </head>
-<body>
-<div id="authGate" aria-hidden="true"></div>
+<body class="auth-required">
 <header><div class="wrap">
  <nav class="nav" aria-label="Main">
   <a class="logo" href="#"><i>▤</i>BookBazar</a><span class="sp"></span>
@@ -131,7 +135,7 @@ body.auth-locked{overflow:hidden}
 <section class="hero"><div class="wrap hero-in">
  <div><h1 data-i="heroT"></h1><p data-i="heroP"></p>
   <div class="acts"><button class="btn pri" id="heroSell" type="button" data-i="sellBooks"></button><a class="btn" href="#marketplace" data-i="explore"></a></div></div>
- <div class="shelf" aria-hidden="true"><b style="height:90px;background:#10B981"></b><b style="height:120px;background:#1E3A8A"></b><b style="height:100px;background:#A7F3D0"></b><b style="height:135px;background:#059669"></b><b style="height:95px;background:#D1FAE5"></b><b style="height:115px;background:#10B981"></b></div>
+ <div class="shelf" aria-hidden="true"><b style="height:90px;background:#0F9D78"></b><b style="height:120px;background:#172B4D"></b><b style="height:100px;background:#BCEBDD"></b><b style="height:135px;background:#087F62"></b><b style="height:95px;background:#DDF5EA"></b><b style="height:115px;background:#0F9D78"></b></div>
 </div></section>
 
 <main class="wrap" id="marketplace">
@@ -271,8 +275,8 @@ const pathOf=u=>{const i=String(u).indexOf("/book-photos/");return i<0?null:deco
 async function rmPhotos(urls){const p=urls.map(pathOf).filter(Boolean);if(p.length)try{await db.storage.from("book-photos").remove(p)}catch{}}
 const popOpen=()=>{try{return $("toast").matches(":popover-open")}catch{return false}};
 function toast(m){const e=$("toast");e.textContent=m;clearTimeout(tt);try{if(!popOpen())e.showPopover()}catch{}tt=setTimeout(()=>{try{e.hidePopover()}catch{}},3200)}
-const openD=id=>{const d=$(id);if(id==="loginDlg")d.classList.toggle("auth-page",!S.user);if(!d.open)d.showModal();if(popOpen()){$("toast").hidePopover();$("toast").showPopover()}},closeD=id=>{if(id==="loginDlg"&&!S.user)return;if($(id).open)$(id).close()};
-function setAuthGate(locked){document.body.classList.toggle("auth-locked",locked);$("authGate").classList.toggle("show",locked);$("authGate").setAttribute("aria-hidden",String(!locked));if(locked){$("loginDlg").classList.add("auth-page");if(!$("loginDlg").open){setMode("login");$("loginDlg").showModal()}}else{if($("loginDlg").open&&mode!=="newpass")$("loginDlg").close();$("loginDlg").classList.remove("auth-page")}}
+const openD=id=>{const d=$(id);if(!d.open)d.showModal();if(popOpen()){$("toast").hidePopover();$("toast").showPopover()}},closeD=id=>{if($(id).open)$(id).close()};
+function setAuthGate(user){const locked=!user;document.body.classList.toggle("auth-required",locked);if(locked){setMode("login",true);if(!$("loginDlg").open)openD("loginDlg")}else closeD("loginDlg");}
 
 function applyLang(){
  document.documentElement.lang=L;$("lang").value=L;
@@ -300,7 +304,6 @@ function render(){
 }
 function map(r){return{id:String(r.id),user_id:r.user_id||null,title:r.title,category:r.category,price:Number(r.price),condition:r.condition,city:r.city,area:r.area||"",author:r.author||"",phone:r.phone||"",description:r.description||"",photos:Array.isArray(r.photos)?r.photos:[],emoji:r.emoji||"📚",created:r.created_at?new Date(r.created_at).getTime():Date.now()}}
 async function load(reset){
- if(!S.user){loading=false;return}
  if(!db){loading=false;fail=true;render();toast(t("noDb"));return}
  const my=++reqId;if(reset){page=0;books=[];total=null}
  loading=true;fail=false;render();
@@ -327,7 +330,7 @@ async function load(reset){
  }catch(err){if(my!==reqId)return;fail=true;toast(t("loadErr")+(err.message||err))}
  loading=false;render();
 }
-async function pruneSaved(){if(!db||!saved.size)return;const ids=[...saved].slice(0,200),{data,error}=await db.from("books").select("id").in("id",ids);if(error)return;const ok=new Set((data||[]).map(x=>String(x.id)));let ch=false;ids.forEach(i=>{if(!ok.has(i)){saved.delete(i);ch=true}});if(ch){persist();render()}}
+async function pruneSaved(){if(!db||!S.user||!saved.size)return;const ids=[...saved].slice(0,200),{data,error}=await db.from("books").select("id").in("id",ids);if(error)return;const ok=new Set((data||[]).map(x=>String(x.id)));let ch=false;ids.forEach(i=>{if(!ok.has(i)){saved.delete(i);ch=true}});if(ch){persist();render()}}
 
 /* auth */
 function setMode(m,keepMsg){mode=m;const su=m==="signup",fg=m==="forgot",nw=m==="newpass";
@@ -350,8 +353,8 @@ $("authForm").addEventListener("submit",async e=>{
  const mail=$("aMail").value.trim(),pw=$("aPass").value,go=$("aGo");go.disabled=true;$("aMsg").textContent="";
  try{
   if(mode==="signup"){const {data,error}=await db.auth.signUp({email:mail,password:pw,options:{data:{full_name:$("aName").value.trim()},emailRedirectTo:location.origin+location.pathname}});if(error)throw error;
-   if(data.session){paintUser(data.user);setAuthGate(false);closeD("loginDlg");load(true);toast(t("created"))}else $("aMsg").textContent=t("checkMail")}
-  else if(mode==="login"){const {data,error}=await db.auth.signInWithPassword({email:mail,password:pw});if(error)throw error;paintUser(data.user);setAuthGate(false);closeD("loginDlg");load(true);toast(t("welcome"))}
+   if(data.session){paintUser(data.user);setAuthGate(data.user);load(true);toast(t("created"))}else $("aMsg").textContent=t("checkMail")}
+  else if(mode==="login"){const {data,error}=await db.auth.signInWithPassword({email:mail,password:pw});if(error)throw error;paintUser(data.user);setAuthGate(data.user);load(true);toast(t("welcome"))}
   else if(mode==="forgot"){const {error}=await db.auth.resetPasswordForEmail(mail,{redirectTo:location.origin+location.pathname});if(error)throw error;$("aMsg").textContent=t("resetSent")}
   else{const {error}=await db.auth.updateUser({password:pw});if(error)throw error;closeD("loginDlg");toast(t("passSaved"));setMode("login")}
  }catch(err){$("aMsg").textContent=err.message||String(err)}
@@ -361,14 +364,13 @@ $("aToggle").onclick=()=>setMode(mode==="login"?"signup":"login");
 $("forgotBtn").onclick=()=>setMode("forgot");
 $("loginBtn").onclick=()=>{if(!S.user){setMode("login");openD("loginDlg");return}
  $("profInfo").innerHTML=`<strong>${esc(S.user.name)}</strong><br>${esc(S.user.email)}`;openD("profDlg")};
-$("profOut").onclick=async()=>{try{await db.auth.signOut()}catch{}paintUser(null);closeD("profDlg");setAuthGate(true);toast(t("loggedOut"))};
+$("profOut").onclick=async()=>{try{await db.auth.signOut()}catch{}paintUser(null);closeD("profDlg");setAuthGate(null);load(true);toast(t("loggedOut"))};
 function toggleMine(){if(!S.user)return;S.mine=!S.mine;S.savedOnly=false;S.cat="all";S.city="all";S.cond="any";S.q="";S.maxp="";$("q").value="";$("maxp").value="";$("loc").value="all";$("cond").value="any";cats();paintUser();load(true);$("marketplace").scrollIntoView()}
 $("mineBtn").onclick=toggleMine;$("profMine").onclick=()=>{closeD("profDlg");toggleMine()};
 if(db){
- db.auth.getSession().then(({data})=>{const u=data.session?.user||null;paintUser(u);setAuthGate(!u);if(u){render();load(true);pruneSaved()}}).catch(()=>setAuthGate(true));
- db.auth.onAuthStateChange((ev,s)=>{if(ev==="PASSWORD_RECOVERY"){paintUser(s?.user||null);setAuthGate(!s?.user);setMode("newpass");openD("loginDlg")}const wm=S.mine;paintUser(s?.user||null);if(s?.user){setAuthGate(false);if(wm&&!S.mine)load(true);else render()}else{setAuthGate(true)}});
-}else{setAuthGate(true)}
-$("loginDlg").addEventListener("cancel",e=>{if(!S.user)e.preventDefault()});
+ db.auth.getSession().then(({data})=>{const u=data.session?.user||null;paintUser(u);setAuthGate(u);if(u){load(true);pruneSaved()}else render()}).catch(()=>{setAuthGate(null);$("aMsg").textContent=t("noDb")});
+ db.auth.onAuthStateChange((ev,s)=>{if(ev==="PASSWORD_RECOVERY"){setMode("newpass");openD("loginDlg")}const hadUser=!!S.user,wm=S.mine;paintUser(s?.user||null);setAuthGate(s?.user||null);if((s?.user&&!hadUser)||(wm&&!S.mine))load(true);else render()});
+}
 
 /* listing form */
 function pv(){$("pv").innerHTML=[...keep.map((u,i)=>[u,"k",i]),...fresh.map((u,i)=>[u,"n",i])].map(([u,k,i])=>`<span class="pvi"><img src="${esc(u)}" alt=""><button type="button" data-rm="${k}${i}" aria-label="Remove photo">×</button></span>`).join("")}
@@ -396,7 +398,7 @@ $("sellForm").addEventListener("submit",async e=>{
  const btn=$("sellSubmit"),was=!!editId;let up=[];const old=was?(books.find(b=>b.id===editId)?.photos||[]):[];btn.disabled=true;btn.textContent=t("publishing");
  try{
   up=await upload(u.id);const photos=[...keep,...up];
-  const row={user_id:u.id,title,category:$("bCat").value,price,condition:$("bCond").value,city,area:$("bArea").value.trim(),author:$("bAuthor").value.trim(),phone:phone.replace(/^\+?88/,""),description:$("bDesc").value.trim(),photos,emoji:"📚",color:"#eaf6fd"};
+  const row={user_id:u.id,title,category:$("bCat").value,price,condition:$("bCond").value,city,area:$("bArea").value.trim(),author:$("bAuthor").value.trim(),phone:phone.replace(/^\+?88/,""),description:$("bDesc").value.trim(),photos,emoji:"📚",color:"#EAF5F1"};
   let r;
   if(was){r=await db.from("books").update(row).eq("id",editId).eq("user_id",u.id).select(COLS).single();if(r.error)throw r.error;books=books.map(b=>b.id===editId?map(r.data):b)}
   else{r=await db.from("books").insert(row).select(COLS).single();if(r.error)throw r.error;books.unshift(map(r.data))}
@@ -451,7 +453,7 @@ document.addEventListener("click",e=>{
  if(e.target.id==="resetF"){Object.assign(S,{q:"",cat:"all",city:"all",cond:"any",sort:"newest",maxp:"",savedOnly:false,mine:false});$("q").value="";$("maxp").value="";applyLang();load(true)}
 });
 document.querySelectorAll("dialog").forEach(d=>{let dn=false;d.addEventListener("pointerdown",e=>{dn=e.target===d});d.addEventListener("click",e=>{if(e.target===d&&dn&&!d.querySelector("form"))d.close();dn=false})});
-applyLang();
+applyLang();if(!db){setAuthGate(null);$("aMsg").textContent=t("noDb")}else{setAuthGate(null)}
 </script>
 </body>
 </html>
