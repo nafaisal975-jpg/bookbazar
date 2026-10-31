@@ -7,11 +7,12 @@
 <meta name="description" content="BookBazar: buy and sell new and used books across Bangladesh.">
 <meta property="og:title" content="BookBazar — Buy &amp; Sell Books in Bangladesh">
 <meta property="og:description" content="Affordable textbooks, novels and exam guides from readers near you.">
+<meta property="og:type" content="website"><meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
 <title>BookBazar — Buy &amp; Sell Books in Bangladesh</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--sky:#173F35;--sky-d:#245B4B;--btn:#173F35;--navy:#173F35;--mist:#E8EFE7;--bg:#FBF8F0;--line:#E8E2D6;--ink:#263B34;--muted:#718078;--red:#C84F3D;--r:16px;--sh:0 12px 32px rgba(23,43,77,.09)}
+:root{--sky:#173F35;--sky-d:#245B4B;--btn:#173F35;--navy:#173F35;--mist:#E8EFE7;--bg:#FBF8F0;--line:#E8E2D6;--ink:#263B34;--muted:#5E6D65;--red:#C84F3D;--r:16px;--sh:0 12px 32px rgba(23,63,53,.09)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:130px}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 "Hind Siliguri",Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
 button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}
@@ -71,7 +72,7 @@ h2.t{font-size:25px;letter-spacing:-.6px;color:var(--navy);margin:8px 0 2px}.sub
 footer{background:var(--navy);color:#FFFDF7;padding:28px 0 18px}footer .logo{color:#fff}footer p{color:#E6E5D9;max-width:340px}
 .ft{display:flex;gap:22px;flex-wrap:wrap;justify-content:space-between}.fl{display:flex;gap:12px 20px;flex-wrap:wrap;font-size:13px}.fl a:hover{color:#EFC15F}
 .fb{border-top:1px solid #ffffff22;margin-top:18px;padding-top:14px;font-size:12px;color:#E6E5D9}
-dialog{width:min(560px,calc(100% - 24px));max-height:90vh;overflow:auto;border:0;border-radius:20px;padding:0;background:#fff;color:var(--ink);box-shadow:0 25px 80px rgba(23,43,77,.22)}
+dialog{width:min(560px,calc(100% - 24px));max-height:90vh;overflow:auto;border:0;border-radius:20px;padding:0;background:#fff;color:var(--ink);box-shadow:0 25px 80px rgba(23,63,53,.22)}
 dialog::backdrop{background:#173F3588;backdrop-filter:blur(3px)}
 .modal{padding:22px;display:grid;gap:13px}.mh{display:flex;justify-content:space-between;align-items:center;gap:10px}
 .modal h2{margin:0;color:var(--navy);font-size:23px}.x{border:0;background:var(--mist);color:var(--navy);border-radius:10px;width:36px;height:36px;font-size:21px}
@@ -80,19 +81,7 @@ dialog::backdrop{background:#173F3588;backdrop-filter:blur(3px)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.note{font-size:12px;color:var(--muted);margin:0}
 .ma{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
 .link{border:0;background:none;color:var(--sky-d);font-weight:700;text-decoration:underline;padding:4px}
-
-.dc {
-    width: 100%;
-    height: auto;
-    max-height: 70vh;
-    border-radius: 14px;
-    overflow: hidden;
-    background: var(--mist);
-    display: grid;
-    place-items: center;
-}
-
-.dc img { display: block; width: 100%;  height: auto;  max-height: 70vh; object-fit: contain;}.dc .emo {   font-size: 90px;}
+.dc{width:100%;height:auto;max-height:70vh;border-radius:14px;overflow:hidden;background:var(--mist);display:grid;place-items:center}.dc img{display:block;width:100%;height:auto;max-height:70vh;object-fit:contain}.dc .emo{font-size:90px;padding:30px}
 .th{display:flex;gap:7px;flex-wrap:wrap}.th img{width:62px;height:62px;object-fit:cover;border-radius:9px;border:2px solid var(--line);cursor:pointer}.th img.on{border-color:var(--sky)}
 .dp{font-size:29px;font-weight:800;color:var(--sky-d)}.info{background:var(--mist);border-radius:12px;padding:12px;font-size:13px}.desc{white-space:pre-wrap;color:var(--muted);margin:0}
 #pv{display:flex;gap:8px;flex-wrap:wrap}.pvi{position:relative}.pvi img{width:64px;height:64px;object-fit:cover;border-radius:9px;border:1px solid var(--line)}
@@ -101,17 +90,17 @@ dialog::backdrop{background:#173F3588;backdrop-filter:blur(3px)}
 /* Refined BookBazar palette + members-only entry screen */
 body.auth-required{min-height:100vh;background:#FBF8F0}
 body.auth-required header,body.auth-required .hero,body.auth-required main,body.auth-required .band,body.auth-required footer{display:none!important}
-body.auth-required #loginDlg{position:fixed;inset:0;margin:0;width:100%;max-width:none;height:100dvh;max-height:none;padding:28px;display:grid;place-items:center;overflow:auto;border:0;border-radius:0;background:radial-gradient(ellipse at 12% 15%,rgba(15,157,120,.17),transparent 34%),radial-gradient(ellipse at 88% 82%,rgba(23,43,77,.13),transparent 38%),linear-gradient(135deg,#FFFDF7 0%,#F4EBDD 52%,#FBF8F0 100%);box-shadow:none}
+body.auth-required #loginDlg{position:fixed;inset:0;margin:0;width:100%;max-width:none;height:100dvh;max-height:none;padding:28px;display:grid;place-items:center;overflow:auto;border:0;border-radius:0;background:radial-gradient(ellipse at 12% 15%,rgba(15,157,120,.17),transparent 34%),radial-gradient(ellipse at 88% 82%,rgba(23,63,53,.13),transparent 38%),linear-gradient(135deg,#FFFDF7 0%,#F4EBDD 52%,#FBF8F0 100%);box-shadow:none}
 body.auth-required #loginDlg::backdrop{background:transparent;backdrop-filter:none}
-body.auth-required #loginDlg .modal{width:min(100%,490px);margin:auto;padding:clamp(24px,4vw,38px);gap:17px;border:1px solid rgba(255,255,255,.9);border-radius:26px;background:rgba(255,255,255,.94);box-shadow:0 24px 70px rgba(23,43,77,.13);backdrop-filter:blur(14px)}
+body.auth-required #loginDlg .modal{width:min(100%,490px);margin:auto;padding:clamp(24px,4vw,38px);gap:17px;border:1px solid rgba(255,255,255,.9);border-radius:26px;background:rgba(255,255,255,.94);box-shadow:0 24px 70px rgba(23,63,53,.13);backdrop-filter:blur(14px)}
 .auth-brand{display:flex;align-items:center;gap:12px;margin-bottom:1px}
 .auth-mark{display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,#173F35,#245B4B);color:#fff;font-size:27px;box-shadow:0 8px 18px rgba(15,157,120,.22)}
 .auth-wordmark{font-size:23px;font-weight:800;letter-spacing:-.7px;color:#173F35;line-height:1.1}
-.auth-tagline{font-size:12px;color:#718078;margin-top:3px}
+.auth-tagline{font-size:12px;color:#5E6D65;margin-top:3px}
 .auth-welcome{padding:17px 18px;border-radius:18px;background:linear-gradient(120deg,#F4E2BD,#FFFDF7);border:1px solid #E8E2D6}
 .auth-kicker{font-size:10px;letter-spacing:1.7px;font-weight:800;color:#245B4B}
 .auth-welcome h1{font-size:clamp(23px,4vw,30px);line-height:1.12;letter-spacing:-.8px;color:#173F35;margin:7px 0 7px}
-.auth-welcome p{font-size:13px;line-height:1.5;color:#718078;margin:0}
+.auth-welcome p{font-size:13px;line-height:1.5;color:#5E6D65;margin:0}
 body.auth-required #authForm .mh h2{font-size:21px;color:#173F35}
 body.auth-required #authForm .f{color:#263B34}
 body.auth-required #authForm .f input{padding:12px 13px;border-color:#E8E2D6;background:#FFFDF7;border-radius:12px}
@@ -126,9 +115,9 @@ header{background:rgba(255,253,247,.96)}
 .hero{background:#173F35;border-bottom:0;color:#FFFDF7}
 .hero h1{color:#FFFDF7}.hero p{color:#E6E5D9}
 .hero .btn:not(.pri){background:transparent;border-color:rgba(255,253,247,.42);color:#FFFDF7}
-.hero .btn.pri,.btn.pri,.search button{background:#EE7542;border-color:#EE7542;color:#fff}
-.hero .btn.pri:hover,.btn.pri:hover{background:#D96132;border-color:#D96132}
-.shelf{background:#EFC15F;border:0;border-bottom:10px solid #EE7542;box-shadow:none}
+.hero .btn.pri,.btn.pri,.search button{background:#C24A22;border-color:#C24A22;color:#fff}
+.hero .btn.pri:hover,.btn.pri:hover{background:#A93E1B;border-color:#A93E1B}
+.shelf{background:#EFC15F;border:0;border-bottom:10px solid #C24A22;box-shadow:none}
 .btn.on,.chip.on{background:#173F35;border-color:#173F35;color:#FFFDF7}
 footer{background:#173F35;color:#FFFDF7}
 body.auth-required{background:#FBF8F0}
@@ -139,9 +128,9 @@ body.auth-required #loginDlg .modal{border:1px solid #E8E2D6;background:rgba(255
 .auth-welcome{background:linear-gradient(120deg,#F4E2BD,#FFFDF7);border-color:#E8E2D6}
 .auth-kicker,body.auth-required #authForm .link{color:#245B4B}
 body.auth-required #authForm .f input:focus{border-color:#245B4B;outline:3px solid rgba(36,91,75,.13)}
-body.auth-required #authForm .btn.pri{box-shadow:0 8px 18px rgba(238,117,66,.2)}
+body.auth-required #authForm .btn.pri{box-shadow:0 8px 18px rgba(194,74,34,.2)}
 @media(max-width:520px){body.auth-required #loginDlg{padding:14px}body.auth-required #loginDlg .modal{padding:22px 18px;border-radius:21px;gap:14px}.auth-welcome{padding:14px}}
-@media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-in{grid-template-columns:1fr}.shelf{display:none}}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-in{grid-template-columns:1fr}.shelf{justify-self:start;zoom:.72}}
 @media(max-width:650px){
  body{padding-bottom:76px}html{scroll-padding-top:112px}
  header{position:sticky;top:0}
@@ -158,8 +147,8 @@ body.auth-required #authForm .btn.pri{box-shadow:0 8px 18px rgba(238,117,66,.2)}
  .mobile-bottom-nav .btn{display:flex;flex:1;min-width:0;min-height:58px;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:7px 4px;border:1px solid #E8E2D6;border-radius:14px;background:#FFFDF7;color:#173F35;font-size:11px;line-height:1.25;font-weight:700;white-space:nowrap;box-shadow:0 2px 5px rgba(23,63,53,.06);transition:background .16s ease,border-color .16s ease,box-shadow .16s ease,transform .16s ease}
  .mobile-bottom-nav .btn:hover{background:#F3F7F1;border-color:#B9CEC2;box-shadow:0 4px 10px rgba(23,63,53,.10);transform:translateY(-2px)}
  .mobile-bottom-nav .btn:active{transform:scale(.95);background:#E8EFE7;box-shadow:inset 0 2px 4px rgba(23,63,53,.12)}
- .mobile-bottom-nav .btn.pri{background:#EE7542;color:#fff;border-color:#EE7542;border-radius:14px;box-shadow:0 3px 8px rgba(238,117,66,.22)}
- .mobile-bottom-nav .btn.pri:hover{background:#E76635;border-color:#E76635;box-shadow:0 5px 12px rgba(238,117,66,.28)}
+ .mobile-bottom-nav .btn.pri{background:#C24A22;color:#fff;border-color:#C24A22;border-radius:14px;box-shadow:0 3px 8px rgba(194,74,34,.22)}
+ .mobile-bottom-nav .btn.pri:hover{background:#A93E1B;border-color:#A93E1B;box-shadow:0 5px 12px rgba(194,74,34,.28)}
  .mobile-bottom-nav .btn.on{background:#E8EFE7;color:#173F35;border-color:#B9CEC2;box-shadow:inset 0 1px 3px rgba(23,63,53,.08)}
  .mobile-bottom-nav [hidden]{display:none!important}
  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.cover{height:140px}.three,.two{grid-template-columns:1fr}.hero-in{padding:32px 0}
@@ -254,7 +243,7 @@ body.auth-required #authForm .btn.pri{box-shadow:0 8px 18px rgba(238,117,66,.2)}
   z-index:1;
   background:#EFC15F;
   border:0;
-  border-bottom:9px solid #EE7542;
+  border-bottom:9px solid #C24A22;
   border-radius:18px 18px 7px 7px;
   box-shadow:0 12px 24px rgba(0,0,0,.15);
 }
@@ -265,7 +254,7 @@ body.auth-required #authForm .btn.pri{box-shadow:0 8px 18px rgba(238,117,66,.2)}
 @media(max-width:650px){
   .hero{padding:8px 0 5px !important}
   .hero-in{
-    width:calc(100% - 24px);
+    width:calc(100% - 32px);
     padding:25px 20px !important;
     border-radius:19px;
     box-shadow:0 10px 24px rgba(23,63,53,.17);
@@ -277,11 +266,25 @@ body.auth-required #authForm .btn.pri{box-shadow:0 8px 18px rgba(238,117,66,.2)}
 }
 </style>
 
+<style id="polish">
+.skip{position:absolute;left:12px;top:-60px;background:#173F35;color:#fff;padding:9px 14px;border-radius:10px;z-index:100;font-weight:700}.skip:focus{top:10px}
+.nl{font-weight:700;color:var(--navy);padding:6px 10px;border-radius:9px}.nl:hover{background:var(--mist)}
+.trust{display:flex;gap:6px 20px;flex-wrap:wrap;list-style:none;margin:20px 0 0;padding:0;font-size:13px;color:#E6E5D9}.trust li::before{content:"✓ ";color:#EFC15F;font-weight:800}
+body:not(.auth-required) .auth-brand,body:not(.auth-required) .auth-welcome,#lang2{display:none}
+body.auth-required #lang2{display:block;margin-left:auto}
+body.auth-required #loginDlg [data-close]{display:none}
+.pwt{justify-self:start;margin-top:-6px;font-size:13px}
+.legal p{margin:0;color:var(--muted)}
+@media(max-width:900px){.nl{display:none}}
+@media(max-width:650px){.shelf{zoom:.6}.trust{font-size:12px}}
+</style>
 </head>
 <body class="auth-required">
+<a class="skip" href="#marketplace" data-i="skip"></a>
+<noscript><p style="padding:24px;text-align:center">BookBazar needs JavaScript to run.</p></noscript>
 <header><div class="wrap">
  <nav class="nav" aria-label="Main">
-  <a class="logo" href="#"><i>▤</i>BookBazar</a><span class="sp"></span>
+  <a class="logo" href="#"><i>📚</i>BookBazar</a><a class="nl" href="#how" data-i="hows"></a><a class="nl" href="#safety" data-i="safety"></a><span class="sp"></span>
   <select class="lang" id="lang" aria-label="Language"><option value="en">English</option><option value="bn">বাংলা</option></select>
   <div class="nav-actions" aria-label="Account navigation">
    <button class="btn" id="savedBtn" type="button">♡ <span data-i="saved"></span> <span id="sc">0</span></button>
@@ -303,7 +306,8 @@ body.auth-required #authForm .btn.pri{box-shadow:0 8px 18px rgba(238,117,66,.2)}
 
 <section class="hero"><div class="wrap hero-in">
  <div><h1 data-i="heroT"></h1><p data-i="heroP"></p>
-  <div class="acts"><button class="btn pri" id="heroSell" type="button" data-i="sellBooks"></button><a class="btn" href="#marketplace" data-i="explore"></a></div></div>
+  <div class="acts"><button class="btn pri" id="heroSell" type="button" data-i="sellBooks"></button><a class="btn" href="#marketplace" data-i="explore"></a></div>
+  <ul class="trust"><li data-i="tr1"></li><li data-i="tr2"></li><li data-i="tr3"></li></ul></div>
  <div class="shelf" aria-hidden="true"><b style="height:90px;background:#173F35"></b><b style="height:120px;background:#173F35"></b><b style="height:100px;background:#DCEBE0"></b><b style="height:135px;background:#245B4B"></b><b style="height:95px;background:#F4E2BD"></b><b style="height:115px;background:#173F35"></b></div>
 </div></section>
 
@@ -335,11 +339,11 @@ body.auth-required #authForm .btn.pri{box-shadow:0 8px 18px rgba(238,117,66,.2)}
  </div></div></section>
 
 <footer><div class="wrap"><div class="ft">
- <div><a class="logo" href="#"><i>▤</i>BookBazar</a><p data-i="footP"></p></div>
- <div class="fl"><a href="#marketplace" data-i="browse"></a><a href="#how" data-i="hows"></a><a href="#safety" data-i="safety"></a><a id="contactLink" href="#" data-i="contact"></a></div>
+ <div><a class="logo" href="#"><i>📚</i>BookBazar</a><p data-i="footP"></p></div>
+ <div class="fl"><a href="#marketplace" data-i="browse"></a><a href="#how" data-i="hows"></a><a href="#safety" data-i="safety"></a><a href="#" data-legal data-i="legal"></a><a id="contactLink" href="#" data-i="contact"></a></div>
 </div><div class="fb">© 2026 BookBazar</div></div></footer>
 
-<dialog id="sellDlg"><form class="modal" id="sellForm">
+<dialog id="sellDlg" aria-labelledby="sellTitle"><form class="modal" id="sellForm">
  <div class="mh"><h2 id="sellTitle"></h2><button class="x" type="button" data-close="sellDlg" aria-label="Close">×</button></div>
  <p class="note" data-i="listNote"></p>
  <label class="f"><span data-i="fTitle"></span><input id="bTitle" maxlength="100" required></label>
@@ -356,23 +360,38 @@ body.auth-required #authForm .btn.pri{box-shadow:0 8px 18px rgba(238,117,66,.2)}
  <div class="ma"><button class="btn" type="button" data-close="sellDlg" data-i="cancel"></button><button class="btn pri" type="submit" id="sellSubmit"></button></div>
 </form></dialog>
 
-<dialog id="loginDlg"><form class="modal" id="authForm">
+<dialog id="loginDlg" aria-labelledby="aTitle"><form class="modal" id="authForm">
+ <div class="auth-brand"><span class="auth-mark" aria-hidden="true">📚</span><div><div class="auth-wordmark">BookBazar</div><div class="auth-tagline" data-i="authTag"></div></div><select class="lang" id="lang2" aria-label="Language"><option value="en">English</option><option value="bn">বাংলা</option></select></div>
+ <div class="auth-welcome"><div class="auth-kicker" data-i="authKick"></div><h1 data-i="authH"></h1><p data-i="authP"></p></div>
  <div class="mh"><h2 id="aTitle"></h2><button class="x" type="button" data-close="loginDlg" aria-label="Close">×</button></div>
  <p class="note" id="aNote"></p>
  <label class="f" id="nameF"><span data-i="name"></span><input id="aName" maxlength="60" autocomplete="name"></label>
  <label class="f" id="mailF"><span data-i="email"></span><input id="aMail" type="email" maxlength="254" autocomplete="email" placeholder="you@example.com"></label>
  <label class="f" id="passF"><span id="passL"></span><input id="aPass" type="password" minlength="8" maxlength="72"></label>
+ <button class="link pwt" type="button" id="pwT"></button>
  <p class="note" id="aMsg" role="status" aria-live="polite"></p>
  <div class="ma"><button class="btn" type="button" data-close="loginDlg" data-i="cancel"></button><button class="btn pri" type="submit" id="aGo"></button></div>
  <p class="note" style="text-align:center"><button class="link" type="button" id="forgotBtn" data-i="forgot"></button><br><span id="aPrompt"></span> <button class="link" type="button" id="aToggle"></button></p>
 </form></dialog>
 
-<dialog id="profDlg"><div class="modal">
- <div class="mh"><h2 data-i="myProfile"></h2><button class="x" type="button" data-close="profDlg" aria-label="Close">×</button></div>
+<dialog id="profDlg" aria-labelledby="profT"><div class="modal">
+ <div class="mh"><h2 id="profT" data-i="myProfile"></h2><button class="x" type="button" data-close="profDlg" aria-label="Close">×</button></div>
  <div class="info" id="profInfo"></div>
  <div class="ma"><button class="btn" type="button" id="profMine"></button><button class="btn danger" type="button" id="profOut" data-i="logout"></button></div>
 </div></dialog>
-<dialog id="detDlg"><div class="modal" id="detBox"></div></dialog>
+<dialog id="repDlg" aria-labelledby="repT"><form class="modal" id="repForm">
+ <div class="mh"><h2 id="repT" data-i="report"></h2><button class="x" type="button" data-close="repDlg" aria-label="Close">×</button></div>
+ <p class="note" data-i="reportWhy"></p>
+ <label class="f"><span data-i="repReason"></span><select id="repWhy"></select></label>
+ <label class="f"><span data-i="repNote"></span><textarea id="repNote" rows="3" maxlength="400"></textarea></label>
+ <div class="ma"><button class="btn" type="button" data-close="repDlg" data-i="cancel"></button><button class="btn pri" type="submit" data-i="repSend"></button></div>
+</form></dialog>
+<dialog id="legalDlg" aria-labelledby="legT"><div class="modal legal">
+ <div class="mh"><h2 id="legT" data-i="legalT"></h2><button class="x" type="button" data-close="legalDlg" aria-label="Close">×</button></div>
+ <p data-i="leg1"></p><p data-i="leg2"></p><p data-i="leg3"></p><p data-i="leg4"></p>
+ <div class="ma"><button class="btn pri" type="button" data-close="legalDlg" data-i="ok"></button></div>
+</div></dialog>
+<dialog id="detDlg" aria-labelledby="detT"><div class="modal" id="detBox"></div></dialog>
 <div class="toast" id="toast" popover="manual" role="status" aria-live="polite"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
@@ -389,6 +408,11 @@ const CATS=["Textbooks","Admission & job prep","Novels & fiction","Bangla litera
 const CITIES=["Dhaka","Chattogram","Sylhet","Rajshahi","Khulna","Barishal","Rangpur","Mymensingh"];
 const CITY_BN=["ঢাকা","চট্টগ্রাম","সিলেট","রাজশাহী","খুলনা","বরিশাল","রংপুর","ময়মনসিংহ"];
 const T={en:{
+ authTag:"Buy & sell books near you",authKick:"MEMBERS ONLY",authH:"Welcome back, reader.",authP:"Log in or create a free account to browse books, see seller contacts and list your own.",skip:"Skip to listings",
+ tr1:"Free to list",tr2:"Meet nearby",tr3:"Pay in person",free:"Free",share:"Share",linkCopied:"Link copied.",showPw:"Show password",hidePw:"Hide password",
+ repReason:"Reason",repNote:"Details (optional)",repSend:"Send report",rSpam:"Spam or fake listing",rWrong:"Wrong or misleading info",rScam:"Suspected scam",rSold:"Already sold",rOther:"Other",ok:"Got it",
+ legal:"Terms & Privacy",legalT:"Terms & Privacy",leg1:"BookBazar connects buyers and sellers. We do not handle payments, delivery or disputes, so inspect every book and pay only in person.",leg2:"List only books you own. Spam, fake, illegal or misleading listings are removed and accounts may be suspended.",leg3:"We store your email, your name and the phone number you add to a listing. A phone number is shown only to logged-in members who tap “Show contact number”.",leg4:"To delete your account or data, get in touch through the Contact link.",
+ metaT:"BookBazar — Buy & Sell Books in Bangladesh",metaD:"BookBazar: buy and sell new and used books across Bangladesh.",
  saved:"Saved",sell:"Sell a book",login:"Log in",search:"Search",ph:"Search title, author or subject…",maxp:"Max ৳",
  heroT:"Good books deserve a second chapter.",heroP:"Find affordable textbooks, novels and exam guides, or pass your finished books on to another reader.",sellBooks:"Sell your books",explore:"Explore books ↓",
  mktT:"Explore the marketplace",mktP:"Pre-loved reads, study essentials and new discoveries.",all:"All books",allBd:"📍 All Bangladesh",any:"Any condition",newest:"Newest first",low:"Price: low to high",high:"Price: high to low",
@@ -407,6 +431,11 @@ const T={en:{
  details:"Book details",showPhone:"Show contact number",call:"Call",wa:"WhatsApp",saveBook:"Save book",savedBook:"Saved",edit:"Edit",del:"Delete",report:"Report",confirmDel:"Delete this listing permanently?",
  listed:"Listed",author:"Author",noAuthor:"Author not listed",noDesc:"No description provided.",arrange:"Meet in a public place and check the book before you pay.",photoLimit:"Only 3 photos are allowed.",photoErr:"One photo could not be loaded.",photoBig:"Photo is too large (max 15 MB).",retry:"Try again",loadFail:"Could not load books.",photoN:"Photo",needLoginP:"Log in to see the seller's number.",needLoginR:"Log in to report a listing.",noPhone:"Number not available.",reportWhy:"Why are you reporting this listing?",reported:"Thanks, your report was sent.",noDb:"Cannot reach the database. Refresh and try again."},
 bn:{
+ authTag:"আপনার কাছের বই কেনাবেচা",authKick:"শুধু সদস্যদের জন্য",authH:"স্বাগতম, পাঠক।",authP:"বই দেখতে, বিক্রেতার নম্বর পেতে ও নিজের বই দিতে লগইন করুন বা বিনামূল্যে অ্যাকাউন্ট খুলুন।",skip:"বইয়ের তালিকায় যান",
+ tr1:"বিজ্ঞাপন দেওয়া বিনামূল্যে",tr2:"কাছাকাছি দেখা করুন",tr3:"সামনাসামনি টাকা দিন",free:"বিনামূল্যে",share:"শেয়ার",linkCopied:"লিংক কপি হয়েছে।",showPw:"পাসওয়ার্ড দেখান",hidePw:"পাসওয়ার্ড লুকান",
+ repReason:"কারণ",repNote:"বিস্তারিত (ঐচ্ছিক)",repSend:"রিপোর্ট পাঠান",rSpam:"স্প্যাম বা ভুয়া বিজ্ঞাপন",rWrong:"ভুল বা বিভ্রান্তিকর তথ্য",rScam:"প্রতারণার সন্দেহ",rSold:"আগেই বিক্রি হয়ে গেছে",rOther:"অন্যান্য",ok:"বুঝেছি",
+ legal:"শর্তাবলি ও গোপনীয়তা",legalT:"শর্তাবলি ও গোপনীয়তা",leg1:"BookBazar ক্রেতা ও বিক্রেতাকে যুক্ত করে। আমরা পেমেন্ট, ডেলিভারি বা বিরোধ নিষ্পত্তি করি না, তাই বই দেখে নিন এবং সামনাসামনি টাকা দিন।",leg2:"শুধু নিজের বই বিজ্ঞাপন দিন। স্প্যাম, ভুয়া, অবৈধ বা বিভ্রান্তিকর বিজ্ঞাপন সরিয়ে ফেলা হবে এবং অ্যাকাউন্ট বন্ধ হতে পারে।",leg3:"আমরা আপনার ইমেইল, নাম এবং বিজ্ঞাপনে দেওয়া ফোন নম্বর সংরক্ষণ করি। ফোন নম্বর শুধু লগইন করা সদস্য “ফোন নম্বর দেখুন” চাপলে দেখতে পান।",leg4:"অ্যাকাউন্ট বা তথ্য মুছতে চাইলে যোগাযোগ লিংক ব্যবহার করে জানান।",
+ metaT:"BookBazar — বাংলাদেশে বই কেনাবেচা",metaD:"BookBazar: বাংলাদেশজুড়ে নতুন ও পুরোনো বই কিনুন ও বিক্রি করুন।",
  saved:"সংরক্ষিত",sell:"বই বিক্রি করুন",login:"লগইন",search:"খুঁজুন",ph:"বইয়ের নাম, লেখক বা বিষয় খুঁজুন…",maxp:"সর্বোচ্চ ৳",
  heroT:"ভালো বইয়ের গল্প কখনো শেষ হয় না।",heroP:"সাশ্রয়ী দামে পাঠ্যবই, উপন্যাস ও পরীক্ষার গাইড খুঁজুন, অথবা পড়া শেষ বই অন্য পাঠকের হাতে তুলে দিন।",sellBooks:"বই বিক্রি করুন",explore:"বই দেখুন ↓",
  mktT:"বইয়ের বাজার",mktP:"পুরোনো বই, পড়াশোনার বই ও নতুন আবিষ্কার।",all:"সব বই",allBd:"📍 পুরো বাংলাদেশ",any:"যেকোনো অবস্থা",newest:"নতুন আগে",low:"দাম: কম থেকে বেশি",high:"দাম: বেশি থেকে কম",
@@ -429,7 +458,7 @@ let L="en";try{L=localStorage.getItem("bb_lang")==="bn"?"bn":"en"}catch{}
 const t=k=>T[L][k]??T.en[k]??k;
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const loc=()=>L==="bn"?"bn-BD":"en-BD";
-const money=v=>"৳"+Number(v).toLocaleString(loc());
+const money=v=>Number(v)===0?t("free"):"৳"+Number(v).toLocaleString(loc());
 const catName=c=>{const i=CATS.indexOf(c);return L==="bn"&&i>=0?CAT_BN[i]:c};
 const cityName=c=>{const i=CITIES.indexOf(c);return L==="bn"&&i>=0?CITY_BN[i]:c};
 const S={q:"",cat:"all",city:"all",cond:"any",sort:"newest",maxp:"",savedOnly:false,mine:false,user:null};
@@ -437,6 +466,7 @@ let books=[],page=0,hasMore=false,saved=new Set(),mode="login",editId=null,keep=
 try{saved=new Set(JSON.parse(localStorage.getItem("bb_saved")||"[]"))}catch{}
 const persist=()=>{try{localStorage.setItem("bb_saved",JSON.stringify([...saved]))}catch{}};
 const COLS="id,user_id,title,category,price,condition,city,area,author,description,photos,emoji,created_at";
+const extra=new Map();let repId=null,hashDone=false;
 const cond=c=>t(c==="New"?"New":"Used");
 const SK=Array(8).fill('<div class="card sk" aria-hidden="true"></div>').join("");
 const reload=()=>{clearTimeout(rt);rt=setTimeout(()=>load(true),300)};
@@ -448,7 +478,8 @@ const openD=id=>{const d=$(id);if(!d.open)d.showModal();if(popOpen()){$("toast")
 function setAuthGate(user){const locked=!user;document.body.classList.toggle("auth-required",locked);if(locked){setMode("login",true);if(!$("loginDlg").open)openD("loginDlg")}else closeD("loginDlg");}
 
 function applyLang(){
- document.documentElement.lang=L;$("lang").value=L;
+ document.documentElement.lang=L;$("lang").value=L;$("lang2").value=L;document.title=t("metaT");document.querySelector('meta[name="description"]').content=t("metaD");
+ $("repWhy").innerHTML=["rSpam","rWrong","rScam","rSold","rOther"].map(k=>`<option value="${esc(T.en[k])}">${t(k)}</option>`).join("");
  document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
  document.querySelectorAll("[data-ph]").forEach(e=>e.placeholder=t(e.dataset.ph));
  $("loc").innerHTML=`<option value="all">${t("allBd")}</option>`+CITIES.map((c,i)=>`<option value="${c}">${esc(cityName(c))}</option>`).join("");$("loc").value=S.city;
@@ -464,10 +495,10 @@ function applyLang(){
 function cats(){$("cats").innerHTML=["all",...CATS].map(c=>`<button type="button" class="chip ${c===S.cat?"on":""}" data-cat="${esc(c)}" aria-pressed="${c===S.cat}">${esc(c==="all"?t("all"):catName(c))}</button>`).join("")}
 const filtered=()=>books;
 function card(b){const im=b.photos[0],sv=saved.has(b.id);
- return `<article class="card"><button class="open" type="button" data-open="${esc(b.id)}"><div class="cover">${im?`<img src="${esc(im)}" alt="" loading="lazy">`:`<span class="emo" aria-hidden="true">${esc(b.emoji)}</span>`}<span class="cond">${cond(b.condition)}</span></div><div class="cb"><div class="price">${money(b.price)}</div><div class="bt">${esc(b.title)}</div><div class="meta">${esc(b.author||t("noAuthor"))}</div><div class="row"><span class="tag">${esc(catName(b.category))}</span><span class="meta">📍 ${esc(cityName(b.city))}</span></div></div></button><div class="cf"><button type="button" class="heart ${sv?"on":""}" data-save="${esc(b.id)}" aria-pressed="${sv}" aria-label="${t("saveBook")}">${sv?"♥":"♡"}</button></div></article>`}
+ return `<article class="card"><button class="open" type="button" data-open="${esc(b.id)}"><div class="cover">${im?`<img src="${esc(im)}" alt="" loading="lazy">`:`<span class="emo" aria-hidden="true">${esc(b.emoji)}</span>`}<span class="cond">${cond(b.condition)}</span></div><div class="cb"><div class="price">${money(b.price)}</div><div class="bt">${esc(b.title)}</div><div class="meta">${esc(b.author||t("noAuthor"))}</div><div class="row"><span class="tag">${esc(catName(b.category))}</span><span class="meta">📍 ${esc(cityName(b.city))}</span></div></div></button><div class="cf"><button type="button" class="heart ${sv?"on":""}" data-save="${esc(b.id)}" aria-pressed="${sv}" aria-label="${t("saveBook")}: ${esc(b.title)}">${sv?"♥":"♡"}</button></div></article>`}
 function render(){
  const l=filtered();
- $("grid").innerHTML=l.length?l.map(card).join(""):loading?SK:fail?`<div class="empty"><strong>${t("loadFail")}</strong><button class="btn" type="button" id="retry">${t("retry")}</button></div>`:`<div class="empty"><strong>${S.savedOnly?t("noSaved"):t("none")}</strong>${S.savedOnly?t("noSavedP"):t("noneP")}<div style="margin-top:14px"><button class="btn" type="button" id="resetF">${t("clear")}</button></div></div>`;
+ $("grid").innerHTML=l.length?l.map(card).join(""):loading?SK:fail?`<div class="empty"><strong>${t("loadFail")}</strong><button class="btn" type="button" id="retry">${t("retry")}</button></div>`:`<div class="empty"><strong>${S.savedOnly?t("noSaved"):t("none")}</strong>${S.savedOnly?t("noSavedP"):t("noneP")}<div style="margin-top:14px"><button class="btn" type="button" id="resetF">${t("clear")}</button>${S.savedOnly?"":` <button class="btn pri" type="button" id="emptySell">＋ ${t("sell")}</button>`}</div></div>`;
  {const n=total??l.length;$("cnt").textContent=loading&&!l.length?"":L==="bn"?`${n.toLocaleString(loc())}${t("found")}`:`${n} ${n===1?t("one"):t("found")}`}
  $("sc").textContent=saved.size.toLocaleString(loc());$("savedBtn").classList.toggle("on",S.savedOnly);$("moreBtn").hidden=!hasMore;$("moreBtn").disabled=loading;
 }
@@ -497,8 +528,10 @@ async function load(reset){
   const have=new Set(books.map(b=>b.id));
   books=books.concat(data.map(map).filter(b=>!have.has(b.id)));total=count;hasMore=(page+1)*PAGE<count;page++;
  }catch(err){if(my!==reqId)return;fail=true;toast(t("loadErr")+(err.message||err))}
- loading=false;render();
+ loading=false;render();if(!hashDone&&S.user&&!fail){hashDone=true;openFromHash()}
 }
+async function openFromHash(){const m=location.hash.match(/^#b-([\w-]+)$/);if(!m||!S.user||!db)return;const id=m[1];
+ if(!books.some(x=>x.id===id)&&!extra.has(id)){const {data}=await db.from("books").select(COLS).eq("id",id).maybeSingle();if(!data)return;extra.set(id,map(data))}show(id)}
 async function pruneSaved(){if(!db||!S.user||!saved.size)return;const ids=[...saved].slice(0,200),{data,error}=await db.from("books").select("id").in("id",ids);if(error)return;const ok=new Set((data||[]).map(x=>String(x.id)));let ch=false;ids.forEach(i=>{if(!ok.has(i)){saved.delete(i);ch=true}});if(ch){persist();render()}}
 
 /* auth */
@@ -508,7 +541,7 @@ function setMode(m,keepMsg){mode=m;const su=m==="signup",fg=m==="forgot",nw=m===
  $("nameF").hidden=!su;$("mailF").hidden=nw;$("passF").hidden=fg;$("aName").required=su;$("aMail").required=!nw;$("aPass").required=!fg;
  $("passL").textContent=t(nw?"newPass":"pass");$("aPass").autocomplete=(su||nw)?"new-password":"current-password";
  $("aGo").textContent=t({login:"goLogin",signup:"goSignup",forgot:"goForgot",newpass:"goNew"}[m]);
- $("forgotBtn").hidden=m!=="login";$("aToggle").parentElement.hidden=nw;
+ $("forgotBtn").hidden=m!=="login";$("aPass").type="password";$("pwT").textContent=t("showPw");$("pwT").hidden=fg;$("aToggle").parentElement.hidden=nw;
  $("aPrompt").textContent=t(su||fg?"have":"newTo");$("aToggle").textContent=t(su||fg?"goLogin":"create");
  if(!keepMsg)$("aMsg").textContent="";
 }
@@ -579,32 +612,36 @@ $("sellForm").addEventListener("submit",async e=>{
 });
 
 /* detail */
-function show(id){const b=books.find(x=>x.id===id);if(!b)return;const own=S.user&&b.user_id===S.user.id,sv=saved.has(b.id);
- $("detBox").innerHTML=`<div class="mh"><h2>${t("details")}</h2><button class="x" type="button" data-close="detDlg" aria-label="Close">×</button></div>
+function show(id){const b=books.find(x=>x.id===id)||extra.get(id);if(!b)return;const own=S.user&&b.user_id===S.user.id,sv=saved.has(b.id);
+ $("detBox").innerHTML=`<div class="mh"><h2 id="detT">${t("details")}</h2><button class="x" type="button" data-close="detDlg" aria-label="Close">×</button></div>
  <div class="dc" id="dcv">${b.photos[0]?`<img src="${esc(b.photos[0])}" alt="${esc(b.title)}">`:`<span class="emo">${esc(b.emoji)}</span>`}</div>
  ${b.photos.length>1?`<div class="th">${b.photos.map((p,i)=>`<button type="button" class="thb ${i?"":"on"}" data-ph="${i}" aria-label="${t("photoN")} ${i+1}"><img src="${esc(p)}" alt=""></button>`).join("")}</div>`:""}
  <h2>${esc(b.title)}</h2><div class="dp">${money(b.price)}</div>
  <div class="info">${esc(catName(b.category))} · ${cond(b.condition)}<br>📍 ${esc(b.area?b.area+", ":"")}${esc(cityName(b.city))}<br>${esc(b.author?t("author")+": "+b.author:t("noAuthor"))}<br>${t("listed")} ${new Date(b.created).toLocaleDateString(loc())}</div>
  <p class="desc">${esc(b.description||t("noDesc"))}</p>
- <div class="ma" id="dAct"><button class="btn" type="button" data-save="${esc(b.id)}">${sv?"♥ "+t("savedBook"):"♡ "+t("saveBook")}</button>
+ <div class="ma" id="dAct"><button class="btn" type="button" data-save="${esc(b.id)}">${sv?"♥ "+t("savedBook"):"♡ "+t("saveBook")}</button><button class="btn" type="button" id="dShare">⤴ ${t("share")}</button>
  ${own?`<button class="btn" type="button" id="dEdit">${t("edit")}</button><button class="btn danger" type="button" id="dDel">${t("del")}</button>`:`<button class="btn" type="button" id="dRep">⚑ ${t("report")}</button>`}
  <button class="btn pri" type="button" id="dPhone">${t("showPhone")}</button></div><p class="note">${t("arrange")}</p>`;
  openD("detDlg");
+ $("dShare").onclick=async()=>{const u=location.origin+location.pathname+"#b-"+b.id;try{if(navigator.share)await navigator.share({title:b.title,text:b.title+" — "+money(b.price),url:u});else{await navigator.clipboard.writeText(u);toast(t("linkCopied"))}}catch{}};
  $("dPhone").onclick=async()=>{if(!S.user){toast(t("needLoginP"));closeD("detDlg");setMode("login");openD("loginDlg");return}
   const pb=$("dPhone");pb.disabled=true;const {data,error}=await db.rpc("get_book_phone",{book_id:b.id});
   if(error||!data){pb.disabled=false;toast(error?error.message:t("noPhone"));return}
   const n=String(data).replace(/\D/g,""),w=n.startsWith("88")?n:"88"+n;
   $("dAct").insertAdjacentHTML("beforeend",`<a class="btn pri" href="tel:+${w}">📞 ${esc(data)}</a><a class="btn" href="https://wa.me/${w}" target="_blank" rel="noopener">${t("wa")}</a>`);pb.remove()};
- if(!own)$("dRep").onclick=async()=>{if(!S.user){toast(t("needLoginR"));return}const why=prompt(t("reportWhy"));if(!why||why.trim().length<3)return;
-  const {error}=await db.from("reports").insert({book_id:b.id,reason:why.trim().slice(0,500)});toast(error?error.message:t("reported"))};
+ if(!own)$("dRep").onclick=()=>{if(!S.user){toast(t("needLoginR"));return}repId=b.id;openD("repDlg")};
  if(own){$("dEdit").onclick=()=>{closeD("detDlg");editBook(b)};
   $("dDel").onclick=async()=>{if(!confirm(t("confirmDel")))return;const {error}=await db.from("books").delete().eq("id",b.id).eq("user_id",S.user.id);
    if(error){toast(error.message);return}books=books.filter(x=>x.id!==b.id);rmPhotos(b.photos);saved.delete(b.id);persist();total=Math.max(0,(total||1)-1);closeD("detDlg");render();toast(t("deleted"))}}
 }
 $("detBox").addEventListener("click",e=>{const p=e.target.closest("[data-ph]");if(!p)return;$("dcv").innerHTML=`<img src="${esc(p.querySelector("img").src)}" alt="">`;$("detBox").querySelectorAll(".th .thb").forEach(i=>i.classList.toggle("on",i===p))});
 
+$("pwT").onclick=()=>{const p=$("aPass");p.type=p.type==="password"?"text":"password";$("pwT").textContent=t(p.type==="password"?"showPw":"hidePw")};
+$("repForm").addEventListener("submit",async e=>{e.preventDefault();if(!db||!repId)return;const note=$("repNote").value.trim(),reason=($("repWhy").value+(note?": "+note:"")).slice(0,500);
+ const {error}=await db.from("reports").insert({book_id:repId,reason});closeD("repDlg");$("repNote").value="";toast(error?error.message:t("reported"))});
+$("loginDlg").addEventListener("cancel",e=>{if(document.body.classList.contains("auth-required"))e.preventDefault()});
 /* events */
-function save(id){saved.has(id)?saved.delete(id):saved.add(id);persist();if(S.savedOnly&&!saved.has(id)){books=books.filter(b=>b.id!==id);total=Math.max(0,(total||1)-1)}render();if($("detDlg").open)show(id)}
+function save(id){saved.has(id)?saved.delete(id):saved.add(id);persist();if(S.savedOnly&&!saved.has(id)){books=books.filter(b=>b.id!==id);total=Math.max(0,(total||1)-1)}render();if($("detDlg").open){books.some(b=>b.id===id)||extra.has(id)?show(id):closeD("detDlg")}}
 $("grid").addEventListener("click",e=>{const s=e.target.closest("[data-save]");if(s){save(s.dataset.save);return}const o=e.target.closest("[data-open]");if(o)show(o.dataset.open)});
 $("detBox").addEventListener("click",e=>{const s=e.target.closest("[data-save]");if(s)save(s.dataset.save)});
 $("cats").onclick=e=>{const b=e.target.closest("[data-cat]");if(!b)return;S.cat=b.dataset.cat;cats();load(true)};
@@ -616,9 +653,9 @@ $("sort").onchange=e=>{S.sort=e.target.value;load(true)};
 $("maxp").oninput=e=>{S.maxp=e.target.value;reload()};
 $("savedBtn").onclick=()=>{S.savedOnly=!S.savedOnly;load(true)};
 $("moreBtn").onclick=()=>{if(!loading)load(false)};
-$("lang").onchange=e=>{L=e.target.value;try{localStorage.setItem("bb_lang",L)}catch{}applyLang()};
+["lang","lang2"].forEach(id=>$(id).onchange=e=>{L=e.target.value;try{localStorage.setItem("bb_lang",L)}catch{}applyLang()});
 document.addEventListener("click",e=>{
- const c=e.target.closest("[data-close]");if(c)closeD(c.dataset.close);if(e.target.id==="retry")load(true);
+ const c=e.target.closest("[data-close]");if(c)closeD(c.dataset.close);if(e.target.id==="retry")load(true);if(e.target.id==="emptySell")openSell();if(e.target.closest("[data-legal]")){e.preventDefault();openD("legalDlg")}
  if(e.target.id==="resetF"){Object.assign(S,{q:"",cat:"all",city:"all",cond:"any",sort:"newest",maxp:"",savedOnly:false,mine:false});$("q").value="";$("maxp").value="";applyLang();load(true)}
 });
 document.querySelectorAll("dialog").forEach(d=>{let dn=false;d.addEventListener("pointerdown",e=>{dn=e.target===d});d.addEventListener("click",e=>{if(e.target===d&&dn&&!d.querySelector("form"))d.close();dn=false})});
