@@ -189,6 +189,82 @@ body.auth-required #authForm .btn.pri{box-shadow:0 8px 18px rgba(238,117,66,.2)}
 }
 </style>
 
+
+<style id="floating-hero-design">
+/* Floating hero card: keeps the marketplace background visible around it */
+.hero{
+  background:transparent !important;
+  border:0 !important;
+  padding:12px 0 10px !important;
+  color:#FFFDF7;
+}
+.hero-in{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  width:min(1160px,calc(100% - 32px));
+  margin:0 auto;
+  padding:42px 40px !important;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:24px;
+  background:
+    radial-gradient(ellipse at 88% 20%,rgba(38,111,88,.42),transparent 38%),
+    linear-gradient(125deg,#123D32 0%,#173F35 58%,#205747 100%);
+  box-shadow:0 16px 34px rgba(23,63,53,.20),0 4px 10px rgba(23,63,53,.08);
+}
+.hero-in::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  width:48%;
+  height:150%;
+  right:-8%;
+  top:-25%;
+  border-radius:50%;
+  background:rgba(255,255,255,.035);
+  transform:rotate(-18deg);
+  pointer-events:none;
+}
+.hero-in > div{position:relative;z-index:1}
+.hero h1{color:#FFFDF7 !important}
+.hero p{color:#E6E5D9 !important}
+.hero .btn:not(.pri){
+  background:rgba(255,255,255,.035);
+  border-color:rgba(255,253,247,.48);
+  color:#FFFDF7;
+}
+.hero .btn:not(.pri):hover{
+  background:rgba(255,255,255,.12);
+  border-color:#FFFDF7;
+}
+.shelf{
+  position:relative;
+  z-index:1;
+  background:#EFC15F;
+  border:0;
+  border-bottom:9px solid #EE7542;
+  border-radius:18px 18px 7px 7px;
+  box-shadow:0 12px 24px rgba(0,0,0,.15);
+}
+@media(max-width:900px){
+  .hero{padding:10px 0 8px !important}
+  .hero-in{padding:32px 28px !important;border-radius:21px}
+}
+@media(max-width:650px){
+  .hero{padding:8px 0 5px !important}
+  .hero-in{
+    width:calc(100% - 24px);
+    padding:25px 20px !important;
+    border-radius:19px;
+    box-shadow:0 10px 24px rgba(23,63,53,.17);
+  }
+  .hero h1{font-size:clamp(27px,8vw,38px);line-height:1.12}
+  .hero p{font-size:14px;line-height:1.5}
+  .hero .acts{gap:8px}
+  .hero .acts .btn{padding:9px 11px;font-size:13px}
+}
+</style>
+
 </head>
 <body class="auth-required">
 <header><div class="wrap">
@@ -538,4 +614,3 @@ applyLang();if(!db){setAuthGate(null);$("aMsg").textContent=t("noDb")}else{setAu
 </script>
 </body>
 </html>
-
