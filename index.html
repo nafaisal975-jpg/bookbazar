@@ -130,7 +130,26 @@ body.auth-required #authForm .f input:focus{border-color:#245B4B;outline:3px sol
 body.auth-required #authForm .btn.pri{box-shadow:0 8px 18px rgba(238,117,66,.2)}
 @media(max-width:520px){body.auth-required #loginDlg{padding:14px}body.auth-required #loginDlg .modal{padding:22px 18px;border-radius:21px;gap:14px}.auth-welcome{padding:14px}}
 @media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-in{grid-template-columns:1fr}.shelf{display:none}}
-@media(max-width:650px){.nav .btn{padding:8px 10px;font-size:13px}.search{grid-template-columns:1fr auto}.search select{grid-column:1/-1;border-right:0;border-bottom:1px solid var(--line)}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.cover{height:140px}.three,.two{grid-template-columns:1fr}.hero-in{padding:32px 0}}
+@media(max-width:650px){
+ body{padding-bottom:76px}html{scroll-padding-top:112px}
+ header{position:sticky;top:0}
+ .nav{display:flex;flex-wrap:nowrap;justify-content:space-between;gap:8px;padding:10px 0 8px}
+ .nav .logo{font-size:20px;white-space:nowrap}.nav .logo i{width:38px;height:38px}
+ .nav .sp{display:none}.lang{padding:8px 10px;font-size:13px;min-height:40px}
+ .nav-actions{display:none}
+ .search{grid-template-columns:100px minmax(0,1fr) 68px;align-items:stretch;margin:0 0 9px;border-radius:13px;box-shadow:0 5px 16px rgba(23,63,53,.07)}
+ .search select,.search input{padding:11px 9px;font-size:13px;height:48px}
+ .search select{grid-column:auto;border-right:1px solid var(--line);border-bottom:0;white-space:nowrap}
+ .search input{min-width:0;width:100%}.search input::placeholder{font-size:12px}
+ .search button{padding:0 8px;font-size:13px;white-space:nowrap}
+ .mobile-bottom-nav{position:fixed;z-index:30;left:0;right:0;bottom:0;display:flex;align-items:stretch;justify-content:space-around;gap:3px;padding:7px max(8px,env(safe-area-inset-left)) calc(7px + env(safe-area-inset-bottom));background:rgba(255,253,247,.98);border-top:1px solid var(--line);box-shadow:0 -5px 20px rgba(23,63,53,.09);backdrop-filter:blur(12px)}
+ .mobile-bottom-nav .btn{display:flex;flex:1;min-width:0;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:5px 2px;border:0;border-radius:10px;background:transparent;font-size:11px;line-height:1.25;white-space:nowrap}
+ .mobile-bottom-nav .btn.pri{background:#EE7542;color:#fff;border-radius:11px}
+ .mobile-bottom-nav .btn.on{background:#E8EFE7;color:#173F35}
+ .mobile-bottom-nav [hidden]{display:none!important}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.cover{height:140px}.three,.two{grid-template-columns:1fr}.hero-in{padding:32px 0}
+}
+@media(min-width:651px){.mobile-bottom-nav{display:none!important}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 </style>
 </head>
@@ -139,10 +158,12 @@ body.auth-required #authForm .btn.pri{box-shadow:0 8px 18px rgba(238,117,66,.2)}
  <nav class="nav" aria-label="Main">
   <a class="logo" href="#"><i>▤</i>BookBazar</a><span class="sp"></span>
   <select class="lang" id="lang" aria-label="Language"><option value="en">English</option><option value="bn">বাংলা</option></select>
-  <button class="btn" id="savedBtn" type="button">♡ <span data-i="saved"></span> <span id="sc">0</span></button>
-  <button class="btn" id="mineBtn" type="button" hidden></button>
-  <button class="btn" id="loginBtn" type="button"></button>
-  <button class="btn pri" id="sellBtn" type="button">＋ <span data-i="sell"></span></button>
+  <div class="nav-actions" aria-label="Account navigation">
+   <button class="btn" id="savedBtn" type="button">♡ <span data-i="saved"></span> <span id="sc">0</span></button>
+   <button class="btn" id="mineBtn" type="button" hidden></button>
+   <button class="btn" id="loginBtn" type="button"></button>
+   <button class="btn pri" id="sellBtn" type="button">＋ <span data-i="sell"></span></button>
+  </div>
  </nav>
  <form class="search" id="sf" role="search">
   <select id="loc" aria-label="Location"></select>
@@ -150,6 +171,10 @@ body.auth-required #authForm .btn.pri{box-shadow:0 8px 18px rgba(238,117,66,.2)}
   <button type="submit" data-i="search"></button>
  </form>
 </div></header>
+<div class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Mobile navigation"></div>
+<script>
+(()=>{const bar=document.getElementById('mobileBottomNav');const actions=document.querySelector('.nav-actions');if(!bar||!actions)return;const ids=['savedBtn','mineBtn','loginBtn','sellBtn'];const place=()=>{const target=window.matchMedia('(max-width:650px)').matches?bar:actions;ids.forEach(id=>{const el=document.getElementById(id);if(el&&el.parentElement!==target)target.appendChild(el)});};place();window.addEventListener('resize',place);})();
+</script>
 
 <section class="hero"><div class="wrap hero-in">
  <div><h1 data-i="heroT"></h1><p data-i="heroP"></p>
