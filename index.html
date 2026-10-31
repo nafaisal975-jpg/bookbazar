@@ -155,6 +155,40 @@ body.auth-required #authForm .btn.pri{box-shadow:0 8px 18px rgba(238,117,66,.2)}
 @media(min-width:651px){.mobile-bottom-nav{display:none!important}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 </style>
+
+<style id="mobile-compact-layout-fix">
+@media (max-width:650px) {
+  body { padding-bottom: 68px !important; }
+  header { padding-bottom: 5px !important; }
+  .nav { padding: 7px 0 6px !important; min-height: 58px; }
+  .nav .logo { font-size: 19px !important; }
+  .nav .logo i { width: 36px !important; height: 36px !important; }
+  .lang { min-height: 36px !important; padding: 6px 9px !important; }
+  .search {
+    grid-template-columns: 82px minmax(0,1fr) 62px !important;
+    margin: 0 0 6px !important;
+    border-radius: 12px !important;
+  }
+  .search select, .search input { height: 42px !important; padding: 8px 7px !important; font-size: 12px !important; }
+  .search select { overflow: hidden; text-overflow: ellipsis; }
+  .search input::placeholder { font-size: 11px !important; }
+  .search button { padding: 0 5px !important; font-size: 12px !important; }
+  .mobile-bottom-nav {
+    gap: 5px !important;
+    padding: 5px max(7px,env(safe-area-inset-left)) calc(5px + env(safe-area-inset-bottom)) !important;
+  }
+  .mobile-bottom-nav .btn {
+    min-height: 48px !important;
+    padding: 4px 2px !important;
+    gap: 1px !important;
+    border-radius: 11px !important;
+    font-size: 10px !important;
+    box-shadow: 0 1px 4px rgba(23,63,53,.07) !important;
+  }
+  .mobile-bottom-nav .btn.pri { border-radius: 11px !important; }
+}
+</style>
+
 </head>
 <body class="auth-required">
 <header><div class="wrap">
@@ -504,5 +538,4 @@ applyLang();if(!db){setAuthGate(null);$("aMsg").textContent=t("noDb")}else{setAu
 </script>
 </body>
 </html>
-
 
